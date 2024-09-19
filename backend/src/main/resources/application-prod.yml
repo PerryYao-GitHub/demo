@@ -1,0 +1,23 @@
+server:
+  port: 3000
+
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+# database
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: ##################
+    url: jdbc:mysql://localhost:3306/YOUR_DATABASE_NAME?serverTimezone=GMT%2b8 #replace new database name !!!!!!!!!!!!!!
+
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+  global-config:
+    db-config:
+      logic-delete-value: 1  # logical delete
+      logic-not-delete-value: 0  # not logical delete
